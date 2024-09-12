@@ -1,0 +1,75 @@
+body {
+    background-color: #F3ACAC;
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+}
+.container {
+    display: flex;
+    align-items: center;
+    position: fixed;        /* 좌상단에 고정 */
+    top: 10px;
+    left: 10px;
+}
+.image {
+    width: 80px;
+    height: 80px;
+}
+.text {
+    margin-left: 10px;      /* 로고랑 ppiiyoung 사이 간격 조절 */
+    font-size: 30px;
+}
+.buttons {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    /* 중앙 배열 */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: space-between;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.QR, .userinfo, .videos {
+    width: 400px;
+    flex-direction: row;
+    height: 100px;
+    border-radius: 20px;
+    border: none;
+    background-color: #FF7F23;
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;            /* 커서를 버튼으로 변경 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+.QR:hover, .userinfo:hover, .videos:hover {
+    background-color: #FA5050;           /* 버튼에 마우스를 올렸을 때 색상 변경 */
+}
+.category {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 160px;
+    box-sizing: border-box;
+}
+.main, .side {
+    background-color: #F6F1BB;
+    border-radius: 20px;
+    height: 500px;
+}
+.main {
+    flex: 8;
+    margin-right: 10px;
+}
+.side {
+    flex: 2;
+    margin-left: 10px;
+}
