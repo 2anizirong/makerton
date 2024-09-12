@@ -1,41 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ppiiyong Page</title>
+    <title>삐용삐용</title>
     <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
-    <!-- 좌상단 로고 관련 -->
-    <div class="container">
-        <img src="/static/images/logo.png" class="image" alt="Logo">
-        <div class="text">ppiiyong</div>
-    </div>
+    <!-- 헤더 -->
+    <header>
+        <div class="header-bar">
+            <div class="logo-container">
+                <img src="/static/images/logo.png" class="logo" alt="Logo">
+                <h1 class="main-title"><a href="/">삐용삐용</a></h1>
+            </div>
+            <nav class="nav-menu">
+                <a href="/" class="nav-item active">메인 화면</a>
+                <a href="fireservice" class="nav-item">화재 대처 서비스</a>
+                <a href="/signup" class="nav-item">회원 가입</a>
+            </nav>
+        </div>
+    </header>
 
-    <!-- 네모난 카테고리들 관련 -->
-    <div class="category">
-        <div class="main"></div>
-        <div class="side"></div>
-    </div>
-
-    <!-- 버튼 컨테이너 -->
-    <div class="buttons">
-        <!-- QR 코드 버튼 -->
-        <div class="QR">
-            Scan your<br>QR Code
+    <!-- 메인 -->
+    <main>
+        <div class="main-section">
+            <img src="/static/images/logo.png" class="main-logo" alt="Logo"><h2 class="sub-title">화재 대피 도우미 서비스<br>삐용삐용</h2>
+            <p class="description">화재 발생 위험을 감지하고 실시간으로 대피 및 대처를 도와주는<br>화재 대피 도우미 서비스</p>
         </div>
 
-        <!-- 사용자 정보 버튼 -->
-        <div class="userinfo">
-            Please give your<br>simple info.
+        <!-- 원형 정보 카드 -->
+        <div class="info-cards">
+            <div class="card">화재 발생 위험<br>감지 후 알림</div>
+            <div class="card">실시간 대피 경로<br>이미지화</div>
+            <div class="card">대처 메뉴얼<br>음성 및 영상</div>
         </div>
+    </main>
 
-        <!-- 응급 대처 방법 영상 버튼 -->
-        <div class="videos">
-            Go to see<br>Emergency response video
-        </div>
-    </div>
 </body>
 </html>

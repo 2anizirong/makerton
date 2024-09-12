@@ -1,0 +1,185 @@
+@font-face {
+    font-family: 'mainFont';
+    src: url('/static/font/GamjaFlower-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;           /* 스크롤 방지 */
+}
+
+body {
+    font-family: 'mainFont', sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: white;
+    padding: 10px;
+    border-top: 30px solid #E85F0A;
+    border-bottom: 5px solid #E85F0A;
+}
+
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.main-title a {
+    margin-left: 10px;
+    font-size: 30px;
+    color: black;
+    text-decoration: none !important;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-item {
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #333;
+    font-family: 'mainFont', sans-serif;
+}
+
+.nav-item.active {
+    color: #FFA500;
+    font-weight: bold;
+}
+
+.nav-item:hover {
+    color: #000;
+    font-weight: bold;
+}
+
+/* 회원 가입 섹션 */
+.signup-section {
+    margin: 20px auto;
+    padding: 50px;
+    width: 70%;
+    text-align: center;
+}
+
+.signup-section h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.signup-form {
+    background-color: #E85F0A;
+    padding: 80px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 70%;
+    margin: 5px auto;
+    position: relative;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+.form-group input {
+    font-size: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 3px solid #ccc;
+    width: 80%;
+}
+
+button {
+    font-size: 20px;
+    width: 150px;
+    padding: 10px;
+    background-color: #D9D9D9;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'mainFont', sans-serif;
+    position: absolute;         /* 절대 위치로 설정 */
+    right: 80px;
+    bottom: 20px;
+}
+
+button:hover {
+    background-color: #EFE7A8;
+}
+
+/* 모바일 화면 스타일 */
+@media (max-width: 768px) {
+    .logo {
+        margin: 0;
+    }
+
+    .main-title {
+        font-size: 28px; /* Adjusted font size for mobile screens */
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-item {
+        display: block;
+        text-align: center;
+    }
+
+    .sub-title {
+        font-size: 2rem;
+        margin: 5px;
+    }
+
+    .description {
+        font-size: 1.2rem; /* Increased mobile description size */
+        margin: 5px;
+    }
+
+    .signup-section {
+        width: 90%; /* Full width for smaller screens */
+        padding: 30px;
+    }
+
+    .signup-form {
+        width: 100%; /* Full width on smaller screens */
+        max-width: 100%; /* Remove max-width constraint */
+        padding: 40px;
+    }
+
+    .form-group input {
+        font-size: 20px;
+        padding: 12px;
+    }
+
+    button {
+        font-size: 22px;
+        padding: 15px 30px;
+    }
+}
