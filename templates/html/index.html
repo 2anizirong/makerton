@@ -17,11 +17,28 @@
             </div>
             <nav class="nav-menu">
                 <a href="/" class="nav-item active">메인 화면</a>
-                <a href="fireservice" class="nav-item">화재 대처 서비스</a>
-                <a href="/signup" class="nav-item">회원 가입</a>
+                <a href="/fireservice" class="nav-item">화재 대처 서비스</a>
+                
+                {% if user_name %}
+                    <a href="/user_profile" class="nav-item">{{ user_name }}님</a>
+                    <a href="/logout" class="nav-item">로그아웃</a>
+                {% else %}
+                    <a href="/signup" class="nav-item">계정 정보</a>
+                {% endif %}
             </nav>
         </div>
     </header>
+
+    <!-- 검색창 섹션 -->
+    <div class="search-section">
+        <div class="search-container">
+            <input type="text" id="search" placeholder="장소를 입력하세요">
+            <button id="search-btn">
+                <img src="/static/images/search-icon.png" alt="Search Icon">
+            </button>
+        </div>
+        <div id="suggestions" class="suggestions-list"></div> <!-- 추천 결과 표시 -->
+    </div>
 
     <!-- 메인 -->
     <main>
@@ -37,6 +54,6 @@
             <div class="card">대처 메뉴얼<br>음성 및 영상</div>
         </div>
     </main>
-
+    <script type="module" src="/static/javascript/search.js"></script>
 </body>
 </html>

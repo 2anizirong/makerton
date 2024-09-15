@@ -1,0 +1,254 @@
+@font-face {
+    font-family: 'mainFont';
+    src: url('/static/font/Jua-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'mainFont', sans-serif;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: white;
+    padding: 10px;
+    border-top: 30px solid #E85F0A;
+    border-bottom: 5px solid #E85F0A;
+}
+
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.main-title a {
+    margin-left: 10px;
+    font-size: 30px;
+    color: black;
+    text-decoration: none !important;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-item {
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #333;
+}
+
+.nav-item.active {
+    color: #FFA500;
+    font-weight: bold;
+}
+
+.nav-item:hover {
+    color: #000;
+    font-weight: bold;
+}
+
+/* 회원 가입 섹션 */
+.signup-section {
+    margin: 20px auto;
+    padding: 50px;
+    width: 60%;
+    text-align: center;
+}
+
+.signup-section h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.signup-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.signup-form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 16px;
+}
+
+.form-group input {
+    font-family: 'mainFont', sans-serif;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: row;
+}
+
+.signup-button {
+    font-family: 'mainFont', sans-serif;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #E85F0A;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 30%;
+    text-decoration: none !important;
+}
+
+.signup-button {
+    background-color: white;
+    color: #E85F0A;
+    border: 2px solid #E85F0A;
+}
+
+.signup-button:hover {
+    background-color: #FCEFE3;
+}
+
+.signup-button:hover {
+    background-color: #D04A00;
+}
+
+.signup-button {
+    background-color: white;
+    color: #E85F0A;
+    border: 2px solid #E85F0A;
+}
+
+.signup-button:hover {
+    background-color: #FCEFE3;
+}
+
+/* 오류 메시지 스타일 */
+#error-message {
+    color: red;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* 모바일 화면 스타일 */
+@media (max-width: 768px) {
+    .logo {
+        margin: 0;
+    }
+
+    .main-title {
+        font-size: 20px;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;             /* 목록 세로로 나열 --> 가로 출력하려니까 아다리가 안맞음.. */
+    }
+
+    .nav-item {
+        display: block;
+        text-align: center;
+    }
+
+    .signup-section {
+        width: 90%;
+    }
+
+    .signup-form {
+        padding: 20px;
+    }
+
+    .form-group input {
+        padding: 10px;
+    }
+
+    .form-group input {
+        font-family: 'mainFont', sans-serif;
+        font-size: 16px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 2px solid #ccc;
+        width: 70%;
+        margin-top: 5px;
+    }
+
+    .button-container {
+        display: flex;
+        gap: 10px;
+        justify-content: flex-start;
+    }
+    
+    .signup-button {
+        font-family: 'mainFont', sans-serif;
+        font-size: 15px;
+        padding: 10px 20px;
+        background-color: #E85F0A;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        width: 35%;
+    }
+    
+    .signup-button {
+        background-color: white;
+        color: #E85F0A;
+        border: 2px solid #E85F0A;
+    }
+    
+    .signup-button:hover {
+        background-color: #FCEFE3;
+    }
+    
+    .signup-button:hover {
+        background-color: #D04A00;
+    }
+    
+    .signup-button {
+        background-color: white;
+        color: #E85F0A;
+        border: 2px solid #E85F0A;
+    }
+    
+    .signup-button:hover {
+        background-color: #FCEFE3;
+    }
+}
