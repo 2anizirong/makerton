@@ -2,45 +2,46 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainElement = document.querySelector('main');
     const favoriteIcon = document.getElementById('favorite-icon');
     
-    // Get place name and user name from data attributes
+    // 장소명이랑 유저 이름 불러오기
     const placeName = mainElement.getAttribute('data-place-name');
     const userName = mainElement.getAttribute('data-user-name');
 
-    // Check if user is logged in
+    // 유저 로그인 확인
     if (userName) {
-        // Show the favorite icon if logged in
+        // 유저가 로그인을 한 경우 즐겨찾기 표시 할 수 있게 아이콘 표시
         favoriteIcon.style.display = 'inline';
 
-        // Get the list of favorite places from localStorage
+        // 로컬 스토리지에서 즐겨찾기 장소 목록 가져오기
         let favoritePlaces = JSON.parse(localStorage.getItem('favoritePlaces')) || [];
 
-        // Check if the current place is already a favorite
+        // 해당 장소가 현재 이미 즐겨찾기로 표시되어 있는지 확인
         const isFavorite = favoritePlaces.includes(placeName);
 
         if (isFavorite) {
+            // 즐겨찾기 표시가 되어있으면 아이콘 활성화
             favoriteIcon.classList.add('active');
             favoriteIcon.textContent = '★';
         }
 
-        // Toggle favorite status on icon click
+        // 아이콘 클릭 시 즐겨찾기 상태로 계속 토글시키기
         favoriteIcon.onclick = () => {
             if (favoriteIcon.classList.contains('active')) {
-                // Remove favorite
+                // 즐겨찾기 해제
                 favoriteIcon.classList.remove('active');
                 favoriteIcon.textContent = '☆';
                 favoritePlaces = favoritePlaces.filter(place => place !== placeName);
             } else {
-                // Add to favorite
+                // 즐겨찾기 추가
                 favoriteIcon.classList.add('active');
                 favoriteIcon.textContent = '★';
                 favoritePlaces.push(placeName);
             }
 
-            // Update localStorage
+            // 로컬 스토리지 업뎃
             localStorage.setItem('favoritePlaces', JSON.stringify(favoritePlaces));
         };
     } else {
-        // Hide the favorite icon if not logged in
+        // 유저 로그인 안한 경우 즐겨찾기 아이콘 숨김
         favoriteIcon.style.display = 'none';
     }
 });

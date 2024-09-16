@@ -25,7 +25,7 @@ if (storedImage) {
     profileImage.src = storedImage;
 }
 
-// 프로필 이미지 변경 및 localStorage에 저장
+// 프로필 이미지 변경 및 localStorage에 저장 --> 한 번 설정 바꾼 유저 이미지 계속 저장
 saveProfileImageBtn.onclick = () => {
     const file = profileImageUpload.files[0];
     if (file) {
@@ -35,7 +35,7 @@ saveProfileImageBtn.onclick = () => {
             profileImage.src = e.target.result;
             localStorage.setItem('profileImage', e.target.result);
 
-            // 모달 창 닫기 (편집 기능이 모달로 구현되어 있다고 가정)
+            // 모달 창 닫기 (편집 기능이 모달로 구현)
             document.getElementById('editProfileModal').style.display = 'none';
         };
         reader.readAsDataURL(file);

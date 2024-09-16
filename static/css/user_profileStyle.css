@@ -124,7 +124,7 @@ header {
     border-radius: 5px;
 }
 
-/* Modal styles */
+/* 프로필 사진 모달 스타일 */
 .modal {
     display: none;
     position: fixed;
@@ -152,7 +152,7 @@ header {
     cursor: pointer;
 }
 
-/* 장소 즐겨찾기 관련 부분 */
+/* 장소 즐겨찾기 관련 부분 스타일 */
 .location-section {
     padding: 20px;
 }
@@ -192,14 +192,12 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* 즐겨찾기 목록 제목 */
 .favorite-places p {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-/* 즐겨찾기 아이템 스타일 */
 .location-item {
     display: flex;
     justify-content: space-between;
@@ -212,7 +210,7 @@ header {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-/* 즐겨찾기 아이템의 별 아이콘 */
+/* 즐겨찾기 장소 별 아이콘 스타일 */
 .location-item span {
     color: #f39c12;
     margin-right: 10px;

@@ -164,14 +164,15 @@ header {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border: 3px solid #E85F0A;  /* 테두리 두껍게 */
+    border: 3px solid #E85F0A;
     border-radius: 10px;
     padding: 5px;
     background-color: white;
     width: 500px;
 }
 
-#search {           /* 장소를 입력하세요 부분 */
+/* 장소를 입력하세요 부분 */
+#search {
     font-family: 'mainFont', sans-serif;
     padding: 10px;
     width: 100%;
@@ -194,14 +195,14 @@ header {
     height: 30px;
 }
 
-/* 데이터베이스 입력 완료 후 확인 */
+/* 데이터베이스 입력 완료 후 확인 --> 추천 결과 표시하는 부분 스타일 */
 .suggestions-list {
     margin-top: 10px;
     text-align: left;
     max-width: 500px;
     margin: 0 auto;
     border: 1px solid #ddd;
-    display: none;      /* 검색어 입력 전에는 숨김 */
+    display: none;              /* 검색어 입력 전에는 숨김 */
     position: absolute;
     z-index: 10;
     background-color: white;
@@ -272,14 +273,15 @@ header {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        border: 3px solid #E85F0A;  /* 테두리 두껍게 */
+        border: 3px solid #E85F0A;
         border-radius: 10px;
         padding: 5px;
         background-color: white;
         width: 300px;
     }
 
-    #search {           /* 장소를 입력하세요 부분 */
+    /* 장소를 입력하세요 부분 */
+    #search {
         font-family: 'mainFont', sans-serif;
         padding: 10px;
         width: 100%;
@@ -302,14 +304,14 @@ header {
         height: 30px;
     }
 
-    /* 데이터베이스 입력 완료 후 확인 */
+    /* 데이터베이스 입력 완료 후 확인 --> 추천 결과 표시하는 부분 스타일 */
     .suggestions-list {
         margin-top: 10px;
         text-align: left;
         max-width: 500px;
         margin: 0 auto;
         border: 1px solid #ddd;
-        display: none;      /* 검색어 입력 전에는 숨김 */
+        display: none;              /* 검색어 입력 전에는 숨김 */
         position: absolute;
         z-index: 10;
         background-color: white;

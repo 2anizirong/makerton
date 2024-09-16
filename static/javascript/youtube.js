@@ -1,6 +1,9 @@
-const API_KEY = 'AIzaSyDJOqiFGYBKSbMqdzc2y_CqjWnVrQmzxaw';  // Google Cloud Console에서 발급받은 YouTube API 키
-const query = 'fire safety';  // 화재 관련 검색어
-const maxResults = 2;  // 불러올 동영상 개수
+// Google Cloud Console에서 발급받은 YouTube API 키
+const API_KEY = 'AIzaSyDJOqiFGYBKSbMqdzc2y_CqjWnVrQmzxaw';
+// 화재 관련 검색어
+const query = 'fire safety';
+// 화면에 띄울 동영상 개수 (2개씩만 띄우기로)
+const maxResults = 2;
 
 // YouTube Data API를 사용해 동영상 검색
 fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&q=${query}&maxResults=${maxResults}&key=${API_KEY}`)

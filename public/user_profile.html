@@ -41,7 +41,7 @@
         <!-- 프로필 편집 모달 -->
         <div id="editProfileModal" class="modal">
             <div class="modal-content">
-                <span class="close">&times;</span>
+                <span class="close">&times;</span>          <!-- 'x'를 나타내는 문자 엔터티 -->
                 <form id="profileEditForm">
                     <label for="profileImageUpload">프로필 이미지 변경<br>(정방형 사진을 추천합니다.)</label>
                     <input type="file" id="profileImageUpload" name="profileImage" accept="image/*">
@@ -50,9 +50,10 @@
             </div>
         </div>
     </section>
+
     <!-- 즐겨찾기 목록 섹션 -->
     <div id="location-list" class="favorite-places">
-        <!-- 즐겨찾기한 장소들이 여기에 추가됩니다 -->
+        <!-- 즐겨찾기한 장소들 여기에 추가 -->
     </div>
     <script src="/static/javascript/profileimg.js"></script>
     <script src="/static/javascript/profileplace.js"></script>

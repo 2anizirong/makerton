@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const favoritePlaces = JSON.parse(localStorage.getItem('favoritePlaces')) || [];
 
     if (favoritePlaces.length > 0) {
-        // Add favorite places to the location list
+        // 장소 즐겨찾기 눌렀을 때 개인 페이지에 장소 표시
         locationList.innerHTML = `<p>총 ${favoritePlaces.length}개</p>`;
         favoritePlaces.forEach(place => {
             const locationItem = document.createElement('div');
@@ -15,13 +15,13 @@ document.addEventListener('DOMContentLoaded', () => {
             locationList.appendChild(locationItem);
         });
 
-        // Remove favorite place when '×' button is clicked
+        // 'x' 버튼 눌렀을 때 개인 페이지에서 해당 장소 제거
         document.querySelectorAll('.remove-btn').forEach(button => {
             button.onclick = () => {
                 const placeToRemove = button.getAttribute('data-place');
                 const updatedPlaces = favoritePlaces.filter(place => place !== placeToRemove);
                 localStorage.setItem('favoritePlaces', JSON.stringify(updatedPlaces));
-                locationList.innerHTML = ''; // Clear and refresh the list
+                locationList.innerHTML = '';
                 locationList.dispatchEvent(new Event('DOMContentLoaded'));
             };
         });
