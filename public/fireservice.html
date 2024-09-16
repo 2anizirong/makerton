@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삐용삐용</title>
+    <link rel="stylesheet" href="/static/css/fireserviceStyles.css">
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div class="header-bar">
+            <div class="logo-container">
+                <img src="/static/images/logo.png" class="logo" alt="Logo">
+                <h1 class="main-title"><a href="/">삐용삐용</a></h1>
+            </div>
+            <nav class="nav-menu">
+                <a href="/" class="nav-item">메인 화면</a>
+                <a href="/fireservice" class="nav-item active">화재 대처 서비스</a>
+                
+                {% if user_name %}
+                    <a href="/user_profile" class="nav-item">{{ user_name }}님</a>
+                    <a href="/logout" class="nav-item">로그아웃</a>
+                {% else %}
+                    <a href="/signup" class="nav-item">계정 정보</a>
+                {% endif %}
+            </nav>
+        </div>
+    </header>
+
+    <!-- 화재 대처 서비스 섹션 -->
+    <main data-place-name="{{ place_name }}" data-user-name="{{ user_name }}">
+        {% if place_name %}
+            <div class="fire-safety-info">
+                <!-- 즐겨찾기 별표: 로그인된 사용자만 표시 -->
+                {% if user_name %}
+                    <div class="favorite-section">
+                        <span id="favorite-icon" class="favorite-icon">☆</span>
+                    </div>
+                {% endif %}
+                <h2>{{ place_name }} 화재 대처 서비스</h2>
+                <div class="content-container">
+                    <div class="floor-map">
+                        <img src="/static/images/floor-map.png" alt="Floor Map">
+                    </div>
+                    <div class="fire-videos" id="youtube-videos">
+                        <!-- YouTube 동영상이 세로로 3개 표시됩니다 -->
+                    </div>
+                </div>
+            </div>
+        {% else %}
+            <div class="no-content">
+                <h2>먼저 장소를 검색하세요.<br>현재 검색된 장소가 없습니다.</h2>
+            </div>
+        {% endif %}
+    </main>
+
+    
+    <script type="module" src="/static/javascript/search.js"></script>
+    <script src="/static/javascript/youtube.js"></script>
+    <script src="/static/javascript/place.js"></script>
+</body>
+</html>
