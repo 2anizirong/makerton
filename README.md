@@ -52,8 +52,3 @@
 
 
 ![AI활용방안](https://github.com/user-attachments/assets/6af6db8c-5b64-4b73-9254-018dd65263de)
-
-
-
-### 👾 Davinci 게임해보기 👾
-[GO TO PLAY DAVINCI!](https://swcontest-e2cf1.firebaseapp.com/)
